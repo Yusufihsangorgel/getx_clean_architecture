@@ -5,13 +5,13 @@ import '/app/core/widget/app_bar_title.dart';
 
 //Default appbar customized with the design of our app
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
-  final String appBarTitleText;
+  final String? appBarTitleText;
   final List<Widget>? actions;
   final bool isBackButtonEnabled;
 
   CustomAppBar({
     Key? key,
-    required this.appBarTitleText,
+    this.appBarTitleText,
     this.actions,
     this.isBackButtonEnabled = true,
   }) : super(key: key);
@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       automaticallyImplyLeading: isBackButtonEnabled,
       actions: actions,
       iconTheme: const IconThemeData(color: AppColors.appBarIconColor),
-      title: AppBarTitle(text: appBarTitleText),
+      title: AppBarTitle(text: appBarTitleText ?? "Galvapedia"),
     );
   }
 }

@@ -1,208 +1,299 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '/app/core/values/app_colors.dart';
 
-const centerTextStyle = TextStyle(
-  fontSize: 28,
+TextStyle centerTextStyle = TextStyle(
+  fontSize: 28.h,
   fontWeight: FontWeight.bold,
   color: AppColors.centerTextColor,
 );
 
-const errorTextStyle = TextStyle(
-  fontSize: 12,
+TextStyle errorTextStyle = TextStyle(
+  fontSize: 12.h,
   fontWeight: FontWeight.w400,
   color: AppColors.errorColor,
 );
 
-const greyDarkTextStyle = TextStyle(
-    fontSize: 14,
+TextStyle greyDarkTextStyle = TextStyle(
+    fontSize: 14.h,
     fontWeight: FontWeight.w400,
     color: AppColors.textColorGreyDark,
-    height: 1.45);
+    height: 1.45.h);
 
-const primaryColorSubtitleStyle = TextStyle(
-    fontSize: 14,
+TextStyle primaryColorSubtitleStyle = TextStyle(
+    fontSize: 14.h,
     fontWeight: FontWeight.w400,
     color: AppColors.colorPrimary,
-    height: 1.45);
+    height: 1.45.h);
 
-const whiteText16 = TextStyle(
-  fontSize: 16,
+TextStyle whiteText10 = TextStyle(
+    fontSize: 10.h,
+    fontWeight: FontWeight.w400,
+    color: AppColors.white,
+    height: 1.45.h);
+
+TextStyle whiteText12 = TextStyle(
+    fontSize: 12.h,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+    height: 1.45.h);
+
+TextStyle whiteText14 = TextStyle(
+    fontSize: 14.h,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+    height: 1.45.h);
+
+TextStyle whiteText16 = TextStyle(
+  fontSize: 16.h,
   fontWeight: FontWeight.w400,
   color: Colors.white,
 );
 
-const whiteText18 = TextStyle(
-  fontSize: 18,
+TextStyle whiteText18 = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w400,
   color: Colors.white,
 );
 
-const whiteText32 = TextStyle(
-  fontSize: 32,
+TextStyle whiteText32 = TextStyle(
+  fontSize: 32.h,
   fontWeight: FontWeight.w400,
   color: Colors.white,
 );
 
-const cyanText16 = TextStyle(
-  fontSize: 16,
+TextStyle blackText12 = TextStyle(
+  fontSize: 12.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText14 = TextStyle(
+  fontSize: 14.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText16 = TextStyle(
+  fontSize: 16.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText18 = TextStyle(
+  fontSize: 18.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText20 = TextStyle(
+  fontSize: 20.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText24 = TextStyle(
+  fontSize: 24.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText32 = TextStyle(
+  fontSize: 32.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText40 = TextStyle(
+  fontSize: 40.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText48 = TextStyle(
+  fontSize: 48.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle blackText56 = TextStyle(
+  fontSize: 56.h,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle cyanText16 = TextStyle(
+  fontSize: 16.h,
   fontWeight: FontWeight.w400,
   color: AppColors.textColorCyan,
 );
 
-const cyanText32 = TextStyle(
-  fontSize: 32,
+TextStyle cyanText32 = TextStyle(
+  fontSize: 32.h,
   fontWeight: FontWeight.w400,
   color: AppColors.textColorCyan,
 );
 
-const dialogSubtitle = TextStyle(
-  fontSize: 16,
+TextStyle dialogSubtitle = TextStyle(
+  fontSize: 16.h,
   fontWeight: FontWeight.w400,
   color: AppColors.textColorPrimary,
 );
 
-const labelStyle = TextStyle(
-  fontSize: 18,
+TextStyle labelStyle = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w400,
-  height: 1.8,
+  height: 1.8.h,
 );
+
+TextStyle blackAndBig = TextStyle(
+    fontSize: 30.h,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    height: 1.45.h);
+
+TextStyle blackAndSmall = TextStyle(
+    fontSize: 14.h,
+    fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    height: 1.45.h);
 
 final labelStylePrimaryTextColor = labelStyle.copyWith(
   color: AppColors.textColorPrimary,
-  height: 1,
+  height: 1.h,
 );
 
 final labelStyleAppPrimaryColor = labelStyle.copyWith(
   color: AppColors.colorPrimary,
-  height: 1,
+  height: 1.h,
 );
 
 final labelStyleGrey =
-    labelStyle.copyWith(color: const Color(0xFF323232).withOpacity(0.5));
+    labelStyle.copyWith(color: Color(0xFF323232).withOpacity(0.5));
 
 final labelCyanStyle = labelStyle.copyWith(color: AppColors.textColorCyan);
 
-const labelStyleWhite = TextStyle(
-  fontSize: 18,
+TextStyle labelStyleWhite = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w400,
-  height: 1.8,
+  height: 1.8.h,
   color: Colors.white,
 );
 
-const appBarSubtitleStyle = TextStyle(
-    fontSize: 16,
+TextStyle appBarSubtitleStyle = TextStyle(
+    fontSize: 16.h,
     fontWeight: FontWeight.w500,
-    height: 1.25,
+    height: 1.25.h,
     color: AppColors.colorWhite);
 
-const cardTitleStyle = TextStyle(
-    fontSize: 20,
+TextStyle cardTitleStyle = TextStyle(
+    fontSize: 17.h,
     fontWeight: FontWeight.w500,
-    height: 1.2,
+    height: 1.2.h,
     color: AppColors.textColorPrimary);
 
-const cardTitleCyanStyle = TextStyle(
-  fontSize: 20,
+TextStyle cardTitleCyanStyle = TextStyle(
+  fontSize: 20.h,
   fontWeight: FontWeight.w500,
   color: AppColors.colorPrimary,
 );
 
-const cardSubtitleStyle = TextStyle(
-    fontSize: 14,
+TextStyle cardSubtitleStyle = TextStyle(
+    fontSize: 14.h,
     fontWeight: FontWeight.w500,
-    height: 1.2,
+    height: 1.2.h,
     color: AppColors.textColorGreyLight);
 
-const titleStyle = TextStyle(
-  fontSize: 18,
+TextStyle titleStyle = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w500,
-  height: 1.34,
+  height: 1.34.h,
 );
 
-const settingsItemStyle = TextStyle(
-  fontSize: 16,
+TextStyle settingsItemStyle = TextStyle(
+  fontSize: 16.h,
   fontWeight: FontWeight.w400,
 );
 
 final cardTagStyle = titleStyle.copyWith(color: AppColors.textColorGreyDark);
 
-const titleStyleWhite = TextStyle(
-    fontSize: 18, fontWeight: FontWeight.w500, color: AppColors.colorWhite);
+TextStyle titleStyleWhite = TextStyle(
+    fontSize: 18.h, fontWeight: FontWeight.w500, color: AppColors.colorWhite);
 
-const inputFieldLabelStyle = TextStyle(
-  fontSize: 18,
+TextStyle inputFieldLabelStyle = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w500,
-  height: 1.34,
+  height: 1.34.h,
   color: AppColors.textColorPrimary,
 );
 
-const cardSmallTagStyle = TextStyle(
-    fontSize: 14,
+TextStyle cardSmallTagStyle = TextStyle(
+    fontSize: 14.h,
     fontWeight: FontWeight.w500,
-    height: 1.2,
+    height: 1.2.h,
     color: AppColors.textColorGreyDark);
 
-const pageTitleStyle = TextStyle(
-    fontSize: 18,
+TextStyle pageTitleStyle = TextStyle(
+    fontSize: 18.h,
     fontWeight: FontWeight.w600,
-    height: 1.15,
+    height: 1.15.h,
     color: AppColors.appBarTextColor);
 
 final pageTitleBlackStyle =
     pageTitleStyle.copyWith(color: AppColors.textColorPrimary);
 
-const appBarActionTextStyle = TextStyle(
-  fontSize: 16,
+TextStyle appBarActionTextStyle = TextStyle(
+  fontSize: 16.h,
   fontWeight: FontWeight.w600,
   color: AppColors.colorPrimary,
 );
 
-const pageTitleWhiteStyle = TextStyle(
-    fontSize: 28,
+TextStyle pageTitleWhiteStyle = TextStyle(
+    fontSize: 28.h,
     fontWeight: FontWeight.w600,
-    height: 1.15,
+    height: 1.15.h,
     color: AppColors.colorWhite);
 
-const extraBigTitleStyle = TextStyle(
-  fontSize: 40,
+TextStyle extraBigTitleStyle = TextStyle(
+  fontSize: 40.h,
   fontWeight: FontWeight.w600,
-  height: 1.12,
+  height: 1.12.h,
 );
 
 final extraBigTitleCyanStyle =
     extraBigTitleStyle.copyWith(color: AppColors.textColorCyan);
 
-const bigTitleStyle = TextStyle(
-  fontSize: 28,
+TextStyle bigTitleStyle = TextStyle(
+  fontSize: 28.h,
   fontWeight: FontWeight.w700,
-  height: 1.15,
+  height: 1.15.h,
 );
 
-const mediumTitleStyle = TextStyle(
-  fontSize: 24,
+TextStyle mediumTitleStyle = TextStyle(
+  fontSize: 24.h,
   fontWeight: FontWeight.w500,
-  height: 1.15,
+  height: 1.15.h,
 );
 
-const descriptionTextStyle = TextStyle(
-  fontSize: 16,
+TextStyle descriptionTextStyle = TextStyle(
+  fontSize: 16.h,
 );
 
 final bigTitleCyanStyle =
     bigTitleStyle.copyWith(color: AppColors.textColorCyan);
 
-const bigTitleWhiteStyle = TextStyle(
-  fontSize: 28,
+TextStyle bigTitleWhiteStyle = TextStyle(
+  fontSize: 28.h,
   fontWeight: FontWeight.w700,
-  height: 1.15,
+  height: 1.15.h,
   color: Colors.white,
 );
 
-const boldTitleStyle = TextStyle(
-  fontSize: 18,
+TextStyle boldTitleStyle = TextStyle(
+  fontSize: 18.h,
   fontWeight: FontWeight.w700,
-  height: 1.34,
+  height: 1.34.h,
 );
 final boldTitleWhiteStyle =
     boldTitleStyle.copyWith(color: AppColors.textColorWhite);

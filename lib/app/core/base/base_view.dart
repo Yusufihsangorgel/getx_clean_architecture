@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package: myGetxArchitecture/app/core/utils/snackbar.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package: myGetxArchitecture/app/modules/main/views/bottom_nav_bar.dart';
+
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 
@@ -15,7 +17,7 @@ abstract class BaseView<Controller extends BaseController>
     extends GetView<Controller> {
   final GlobalKey<ScaffoldState> globalKey = GlobalKey<ScaffoldState>();
 
-  AppLocalizations get appLocalization => AppLocalizations.of(Get.context!)!;
+  //AppLocalizations get appLocalization => AppLocalizations.of(Get.context!);
 
   final Logger logger = BuildConfig.instance.config.logger;
 
@@ -69,14 +71,12 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   Widget pageContent(BuildContext context) {
-    return SafeArea(
-      child: body(context),
-    );
+    return body(context);
   }
 
   Widget showErrorSnackBar(String message) {
     final snackBar = SnackBar(content: Text(message));
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       ScaffoldMessenger.of(Get.context!).showSnackBar(snackBar);
     });
 
@@ -84,11 +84,7 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   void showToast(String message) {
-    Fluttertoast.showToast(
-        msg: message,
-        toastLength: Toast.LENGTH_SHORT,
-        timeInSecForIosWeb: 1
-    );
+    CustomSnackBar.showCustomToast(message: message);
   }
 
   Color pageBackgroundColor() {
@@ -104,7 +100,9 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   Widget? bottomNavigationBar() {
-    return null;
+    return BottomNavBar(onNewMenuSelected: (index) {
+      null;
+    });
   }
 
   Widget? drawer() {
@@ -112,6 +110,6 @@ abstract class BaseView<Controller extends BaseController>
   }
 
   Widget _showLoading() {
-    return const Loading();
+    return Loading();
   }
 }

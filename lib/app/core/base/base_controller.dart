@@ -1,6 +1,13 @@
 import 'dart:async';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package: myGetxArchitecture/app/data/repository/about/about_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/calculation/GalvanizingCostEstimation/galvanizingCostEstimation_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/calculation/GalvanizingKettleWearEstimation/GalvanizingKettleWearEstimation_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/calculation/ZincCoatingLifeEstimation/ZincCoatingLifeEstimation_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/calculation/ZincConsumptionCalculation/ZincConsumptionCalculation_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/lang/lang_repository.dart';
+import 'package: myGetxArchitecture/app/data/repository/link/link_repository.dart';
+
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 
@@ -17,7 +24,7 @@ import '/flavors/build_config.dart';
 abstract class BaseController extends GetxController {
   final Logger logger = BuildConfig.instance.config.logger;
 
-  AppLocalizations get appLocalization => AppLocalizations.of(Get.context!)!;
+  // AppLocalizations get appLocalization => AppLocalizations.of(Get.context!);
 
   final logoutController = false.obs;
 
@@ -119,4 +126,21 @@ abstract class BaseController extends GetxController {
     _pageSateController.close();
     super.onClose();
   }
+
+  // must be not deleted from memory when current page closed
+  final AboutRepository _aboutRepository =
+      Get.find(tag: (AboutRepository).toString());
+  final LangRepository _langRepository =
+      Get.find(tag: (LangRepository).toString());
+  final LinkRepository _linkRepository =
+      Get.find(tag: (LinkRepository).toString());
+  final GalvanizingKettleWearEstimationRepository
+      _kettleWearEstimationRepository =
+      Get.find(tag: (GalvanizingKettleWearEstimationRepository).toString());
+  final GalvanizingCostEstimationRepository _costEstimationRepository =
+      Get.find(tag: (GalvanizingCostEstimationRepository).toString());
+  final ZincConsumptionCalculationRepository _zincConsumptionRepository =
+      Get.find(tag: (ZincConsumptionCalculationRepository).toString());
+       final ZincCoatingLifeEstimationRepository _coatingLifeEstimationRepository =
+      Get.find(tag: (ZincCoatingLifeEstimationRepository).toString());
 }

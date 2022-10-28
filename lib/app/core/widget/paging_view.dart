@@ -58,7 +58,7 @@ class PagingView extends StatelessWidget {
       child: Column(
         children: [
           child,
-          const SizedBox(height: AppValues.listBottomEmptySpace),
+           SizedBox(height: AppValues.listBottomEmptySpace),
         ],
       ),
     );

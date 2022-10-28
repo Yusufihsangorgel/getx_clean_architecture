@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_template/app/core/values/app_colors.dart';
-import 'package:flutter_getx_template/app/core/values/app_values.dart';
+import 'package: myGetxArchitecture/app/core/values/app_colors.dart';
+import 'package: myGetxArchitecture/app/core/values/app_values.dart';
 
 class Ripple extends StatelessWidget {
   final Function()? onTap;
   final Widget? child;
   final Color rippleColor;
-  final double rippleRadius;
+  final double? rippleRadius;
 
   const Ripple({
     Key? key,
     this.child,
     required this.onTap,
     this.rippleColor = AppColors.defaultRippleColor,
-    this.rippleRadius = AppValues.smallRadius,
+    this.rippleRadius,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class Ripple extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        borderRadius: BorderRadius.circular(rippleRadius),
+        borderRadius: BorderRadius.circular(rippleRadius ?? AppValues.smallRadius),
         highlightColor: rippleColor,
         onTap: onTap,
         child: child,
